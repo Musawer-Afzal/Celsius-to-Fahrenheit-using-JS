@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius to Ferenheit Converter</title>
+</head>
+<body>
+
+    <h1>Celsius to Fahrenheit Converter</h1>
+
+    <form onsubmit="convert(event)">
+        Enter the Temperature in Celsius: <input type="number" id="celsius" required step="0.1"><br>
+        <Button>Convert</Button>
+    </form>
+
+    <h1 id="resultWindow"></h1>
+
+    <script>
+        function convert(event){
+        event.preventDefault();
+        let Temp_Celsius = document.querySelector("#celsius").value;
+
+        console.log(Temp_Celsius);
+
+        let Temp_Fahren = (Number(Temp_Celsius) * (9 / 5)) + 32;
+
+        document.querySelector("#resultWindow").innerHTML = Temp_Fahren;
+    }
+    </script>
+</body>
+</html>
